@@ -1,0 +1,29 @@
+{
+  "name": "projectsmean",
+  "version": "1.0.0",
+  "description": "learn mean",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.14.0",
+    "mongojs": "^2.4.0",
+    "server": "^0.0.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "master dev",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PabloMV/meanjs.git"
+  },
+  "keywords": [
+    "jsmean"
+  ],
+  "author": "Pablo Viana",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PabloMV/meanjs/issues"
+  },
+  "homepage": "https://github.com/PabloMV/meanjs#readme"
+}
