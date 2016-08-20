@@ -18,10 +18,23 @@ app.get('/contactlist', function(req, res){
 app.post('/contactlist', function(req, res){
         req.body;
         console.log(req.body);
-       db.contactlist.insert(req.body, function(err, doc){
-           res.json(doc);
-       })
-   
+        db.contactlist.insert(req.body, function(err, doc){
+        res.json(doc);
+       })   
+});
+
+app.delete('/contactlist/:id', function(req, res){
+    var id  = req.params.id;        
+    db.contactlist.remove({_id: mongo.ObjectId(id)}, function (err, doc) {
+        res.json(doc);
+     })   
+});
+
+app.get('/contactlist/:id', function(req, res){
+    var id  = req.params.id;        
+    db.contactlist.findOne({_id: mongo.ObjectId(id)}, function (err, doc) {
+        res.json(doc);
+     })   
 });
 
 app.listen(3000);
